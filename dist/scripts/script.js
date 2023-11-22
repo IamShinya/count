@@ -6,3 +6,9 @@ btn.addEventListener('click',function(e) {
   console.log(total += 1);
   
 },false);
+
+let counter = (cnt) => {
+  return cnt + 1;
+};
+
+console.log(counter(0));
