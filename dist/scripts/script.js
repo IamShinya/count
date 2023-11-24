@@ -1,21 +1,10 @@
-let btn = document.getElementById('btn');
+const btn = document.getElementById('btn');
 
-btn.addEventListener('click',function(e) {
+btn.addEventListener('click',function() {
   
-  let result = document.getElementById('result');
-  result.textContent = counter();
-  // let total = Number(result.textContent);
-  // console.log(total += 1);
-  
+  const result = document.getElementById('result');
+  const pulsNum = 1;
+  let numResult = Number(result.textContent) + pulsNum;
+  result.textContent = numResult;
+
 },false);
-
-
-let counter = () => {
-  let countUp = 0;
-  countUp ++;
-  return countUp;
-};
-
-
-
-
