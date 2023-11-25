@@ -1,13 +1,6 @@
 const btn = document.getElementById('btn');
 const result = document.getElementById('result');
 
-
-
-
-
-
-
-
 btn.addEventListener('click',function() {
   
   // const result = document.getElementById('result');
@@ -19,4 +12,5 @@ btn.addEventListener('click',function() {
     result.textContent = 'LIMIT!!';
     window.alert('カウントが上限に達しました！');
   }
+  
 },false);
