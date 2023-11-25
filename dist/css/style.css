@@ -1,5 +1,11 @@
-#btn {
+@charset "UTF-8";
+/*!こちらはSassで出力されております*/
+.btn {
   color: blue;
+}
+
+.limit {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
