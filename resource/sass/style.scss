@@ -1,8 +1,21 @@
 @charset "UTF-8";
 /*!こちらはSassで出力されております*/
+html {
+  font-size: 100%;
+}
+
+div {
+  margin: 10rem;
+}
 
 .btn {
+  font-size: 2rem;
   color: blue;
+  border: 1px solid black;
+}
+
+.result {
+  font-size: 2rem;
 }
 
 .limit {
