@@ -4,10 +4,6 @@ html {
   font-size: 100%;
 }
 
-div {
-  margin: 10rem;
-}
-
 .btn {
   font-size: 2rem;
   color: blue;
@@ -20,6 +16,10 @@ div {
 
 .limit {
   color: red;
+}
+
+.usrCnt {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.css.map */

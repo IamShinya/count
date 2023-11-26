@@ -16,5 +16,29 @@ btn.addEventListener('click',function() {
       result.textContent = 'LIMIT!!';
     }
   }
-  
 },false);
+
+const btn2 = document.querySelector('.btn2');
+const usrCnt = document.querySelector('.usrCnt');
+const result2 = document.querySelector('.result2');
+
+btn2.addEventListener('click',function() {
+  const numEx =/\d/;
+  const usrNumber = Number(usrCnt.value)
+  if(numEx.test(usrNumber)) {
+    if(usrNumber <= 1000){
+      const container = document.getElementById('container');
+      const newBtn = document.createElement('button');
+      newBtn.textContent = 'COUNT UP!!!';
+      container.appendChild(newBtn);
+      console.log(newBtn);
+      result2.textContent = usrCnt.value;
+    }else{
+      window.alert('１０００以下でお願いします！');
+    }
+    
+  }else{
+    window.alert('１～１０００までの数字で記入して下さい！！');
+  }
+  
+});
