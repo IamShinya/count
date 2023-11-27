@@ -4,10 +4,22 @@ html {
   font-size: 100%;
 }
 
-.btn {
+@mixin btn(){
   font-size: 2rem;
   color: blue;
   border: 1px solid black;
+}
+
+.btn {
+  @include btn();
+}
+
+.btn2 {
+  @include btn();
+}
+
+.newBtn {
+  @include btn();
 }
 
 .result {
