@@ -4,22 +4,31 @@ html {
   font-size: 100%;
 }
 
-.btn {
+#header {
+  height: 100px;
+  background-color: rgba(0, 128, 0, 0.4);
+}
+
+.btn, .btn2, .newBtn, .resetBtn {
   font-size: 2rem;
   color: blue;
   border: 1px solid black;
 }
 
-.btn2 {
+.headerText {
   font-size: 2rem;
-  color: blue;
+  color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  padding: 2rem 17rem;
   border: 1px solid black;
 }
 
-.newBtn {
-  font-size: 2rem;
-  color: blue;
-  border: 1px solid black;
+.form {
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 1.5rem;
 }
 
 .result {

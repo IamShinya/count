@@ -27,13 +27,10 @@ const form = document.querySelector('form');
 
 //ユーザーから数値を取得し、その数からカウントアップ
 btn2.addEventListener('click',function() {
-  // if(usrCnt.textContent === ''){   //検討中！！！！！
-  //   form.textContent = '';
-  // }else{
-  //   window.alert('数字を入力して下さい！');
-  // }
+  
   
   const numEx =/\d/;//数字であるか判定
+  const tabEx =/\S/;//空白出ないかどうか判定＊検討中！
   const usrNumber = Number(usrCnt.value)
   const pulsNum = 1;
   let numResult = usrNumber + pulsNum;
@@ -48,6 +45,11 @@ btn2.addEventListener('click',function() {
         newBtn.className = 'newBtn';
         newBtn.textContent = 'COUNT UP!!!';
         container.appendChild(newBtn);
+        const resetBtn = document.createElement('button');
+        resetBtn.className = 'resetBtn';
+        resetBtn.textContent = 'RESET!!!';
+        container.appendChild(resetBtn);
+        form.textContent = '';
       }
       result2.textContent = usrCnt.value;
     }else{
@@ -60,6 +62,10 @@ btn2.addEventListener('click',function() {
   document.querySelector('.newBtn').addEventListener('click',function(){
     result2.textContent ++;
   },false);
+
+  document.querySelector('.resetBtn').addEventListener('click',function(){
+    location.reload();
+  });
 
 });
 

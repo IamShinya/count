@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="../css/style.css"><!--任意のｃｓｓファイル-->
   </head>
   <body>
+    <header id="header">
+      <p class="headerText">LET'S COUNT UP!!!</p>
+    </header>
+
     <div>
+      <p class="text">ボタンを押すと1～10までカウントアップします！</p>
       <button class="btn">COUNT UP!</button>
       <span class="result">0</span>
     </div>
 
     <form class="form">
-      <label for="usrCnt">ボタン</label><br>
+      <label for="usrCnt" class="text">1～1000までの数字を入力して下さい！<br>その数字からカウントアップします！</label><br>
       <input class="usrCnt" type="text" name="usrCnt">
       <input class="btn2" type="button" value="送信！">
     </form>
