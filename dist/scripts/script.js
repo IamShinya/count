@@ -27,20 +27,15 @@ const form = document.querySelector('form');
 
 //ユーザーから数値を取得し、その数からカウントアップ
 btn2.addEventListener('click',function() {
-  
-  
-  const numEx =/\d/;//数字であるか判定
-  const tabEx =/\S/;//空白出ないかどうか判定＊検討中！
-  const usrNumber = Number(usrCnt.value)
-  const pulsNum = 1;
-  let numResult = usrNumber + pulsNum;
 
-  
+  const numEx =/\d/g;//数字であるか判定
+  const usrNumber = Number(usrCnt.value);
+
   if(numEx.test(usrNumber)) {//数字であるか
     if(usrNumber <= 1000){//1000以下であるか
-      const container = document.getElementById('container');
 
       if(document.querySelector('.newBtn') === null){//newBtnが有るかどうか
+        const container = document.getElementById('container');
         const newBtn = document.createElement('button');
         newBtn.className = 'newBtn';
         newBtn.textContent = 'COUNT UP!!!';
@@ -50,8 +45,14 @@ btn2.addEventListener('click',function() {
         resetBtn.textContent = 'RESET!!!';
         container.appendChild(resetBtn);
         form.textContent = '';
+        if(usrCnt.value !== '' && usrCnt.value !== ' ' && usrCnt.value !== '　'){
+          result2.textContent = usrCnt.value;
+        }else{
+          result2.textContent = 0;
+        }
       }
-      result2.textContent = usrCnt.value;
+
+      
     }else{
       window.alert('１０００以下でお願いします！');
     }
