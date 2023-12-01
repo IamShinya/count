@@ -9,12 +9,15 @@ btn.addEventListener('click',function() {
   if(numResult <= 10){
     result.textContent = numResult;
   }else{
-    if(window.confirm('カウントが上限に達しました！\n最初からカウントし直しますか？')){
-      location.reload();
-    }else{
-      result.classList.add('limit');
-      result.textContent = 'LIMIT!!';
-    }
+    textLimit();
   }
 },false);
 
+function textLimit () {
+  if(window.confirm('カウントが上限に達しました！\n最初からカウントし直しますか？')){
+    location.reload();
+  }else{
+    result.classList.add('limit');
+    result.textContent = 'LIMIT!!';
+  }
+}

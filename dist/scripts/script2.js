@@ -5,7 +5,7 @@ const form = document.querySelector('form');
 
 //ユーザーから数値を取得し、その数からカウントアップ
 btn2.addEventListener('click',function() {
-
+  
   const numEx =/\d/g;//数字であるか判定
   const usrNumber = Number(usrCnt.value);
 
@@ -38,12 +38,27 @@ btn2.addEventListener('click',function() {
     window.alert('１～１０００までの数字で記入して下さい！！');
   }
 
+  let cnt = 0;
   document.querySelector('.newBtn').addEventListener('click',function(){
-    result2.textContent ++;
+    cnt ++;
+    if(cnt <= 10){
+      result2.textContent ++;
+    }else{
+      textLimit();
+    }
   },false);
 
   document.querySelector('.resetBtn').addEventListener('click',function(){
     location.reload();
   });
 
-});
+},false);
+
+function textLimit () {
+  if(window.confirm('カウントが上限に達しました！\n最初からカウントし直しますか？')){
+    location.reload();
+  }else{
+    result2.classList.add('limit');
+    result2.textContent = 'LIMIT!!';
+  }
+}
